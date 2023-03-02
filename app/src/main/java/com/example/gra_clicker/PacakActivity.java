@@ -19,6 +19,7 @@ public class PacakActivity extends AppCompatActivity {
     private int czas=10;
     private TextView textViewCzas;
     private TextView textViewPunkty;
+    private int punkty = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,12 @@ public class PacakActivity extends AppCompatActivity {
                         if (czas > 0) {
                             czas--;
                             textViewCzas.setText("Czas" + Integer.toString(czas));
+                            pokazJedenObraz();
+                        }
+                        else{
+                            for(ImageView obraz:imageViews){
+                                obraz.setVisibility(View.INVISIBLE);
+                            }
                         }
                         handler.postDelayed(this, 1000);
                     }
@@ -59,5 +66,22 @@ public class PacakActivity extends AppCompatActivity {
         //pomnożone jako imageVIew.size
         int wylosowana = (int) (Math.random()*imageViews.size());
         imageViews.get(wylosowana).setVisibility(View.VISIBLE);
+        imageViews.get(wylosowana).setVisibility(View.VISIBLE);
+
+
+        if(czas>0){
+        imageViews.get(wylosowana).setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        punkty++;
+                        textViewPunkty.setText("Punkty" + Integer.toString(punkty));
+                        pokazJedenObraz();
+                    }
+                }
+        );
     }
+    }
+
+
 }

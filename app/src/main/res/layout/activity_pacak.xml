@@ -31,6 +31,7 @@
             android:layout_height="200dp"
             app:layout_column="0"
             app:layout_row="0"
+            android:onClick="pac"
             app:srcCompat="@drawable/ic_launcher_foreground" />
 
         <ImageView
@@ -39,6 +40,7 @@
             android:layout_height="200dp"
             app:layout_column="1"
             app:layout_row="0"
+            android:onClick="pac"
             app:srcCompat="@drawable/ic_launcher_foreground" />
 
         <ImageView
@@ -47,6 +49,7 @@
             android:layout_height="200dp"
             app:layout_column="0"
             app:layout_row="1"
+            android:onClick="pac"
             app:srcCompat="@drawable/ic_launcher_foreground" />
 
         <ImageView
@@ -55,6 +58,7 @@
             android:layout_height="200dp"
             app:layout_column="1"
             app:layout_row="1"
+            android:onClick="pac"
             app:srcCompat="@drawable/ic_launcher_foreground" />
     </androidx.gridlayout.widget.GridLayout>
 
