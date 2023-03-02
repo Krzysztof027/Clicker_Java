@@ -19,7 +19,8 @@ public class ZegarSzachowyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_zegar_szachowy);
-        button.findViewById(R.id.button3);
+
+        button = findViewById(R.id.button3);
 
         textView1 = findViewById(R.id.textView5);
         TextView2 = findViewById(R.id.textView6);
